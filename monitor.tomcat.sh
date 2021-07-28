@@ -5,9 +5,6 @@ STARTTOMCAT='$tomcat_home/bin/startup.sh'
 url='http://172.29.207.41:9090/ns/door/#/main/user'
 code=`curl -I -m 30 -o /dev/null -s -w %{http_code}"\n" $url`
 
-#while true
-
-#do
 
 echo "访问时间是：`date '+%Y%m%d %H:%M:%S'`--$code--->$url" >>  /var/log/monitor.tomcat.visit.log  
 
@@ -28,5 +25,3 @@ else
                 fi
 fi 
 
-
-#done
